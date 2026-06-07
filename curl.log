@@ -1,0 +1,39 @@
+Note: Unnecessary use of -X or --request, POST is already inferred.
+* Host localhost:5000 was resolved.
+* IPv6: ::1
+* IPv4: 127.0.0.1
+*   Trying [::1]:5000...
+* Established connection to localhost (::1 port 5000) from ::1 port 55086 
+* using HTTP/1.x
+> POST /api/auth/login HTTP/1.1
+> Host: localhost:5000
+> User-Agent: curl/8.18.0
+> Accept: */*
+> Content-Type: application/json
+> Content-Length: 50
+> 
+} [50 bytes data]
+* upload completely sent off: 50 bytes
+< HTTP/1.1 500 Internal Server Error
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< Origin-Agent-Cluster: ?1
+< Referrer-Policy: no-referrer
+< Strict-Transport-Security: max-age=31536000; includeSubDomains
+< X-Content-Type-Options: nosniff
+< X-DNS-Prefetch-Control: off
+< X-Download-Options: noopen
+< X-Frame-Options: SAMEORIGIN
+< X-Permitted-Cross-Domain-Policies: none
+< X-XSS-Protection: 0
+< Access-Control-Allow-Origin: *
+< Content-Type: application/json; charset=utf-8
+< Content-Length: 1248
+< ETag: W/"4e0-oVuW5IoBcUfYGwt6Wz/IvCebabY"
+< Date: Wed, 08 Apr 2026 13:31:16 GMT
+< Connection: keep-alive
+< Keep-Alive: timeout=5
+< 
+{ [1248 bytes data]
+* Connection #0 to host localhost:5000 left intact
+{"message":"Cannot set property query of #<IncomingMessage> which has only a getter","stack":"TypeError: Cannot set property query of #<IncomingMessage> which has only a getter\n    at D:\\hocsinh\\open-online-classroom\\backend\\node_modules\\xss-clean\\lib\\index.js:8:30\n    at Layer.handleRequest (D:\\hocsinh\\open-online-classroom\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at trimPrefix (D:\\hocsinh\\open-online-classroom\\backend\\node_modules\\router\\index.js:342:13)\n    at D:\\hocsinh\\open-online-classroom\\backend\\node_modules\\router\\index.js:297:9\n    at processParams (D:\\hocsinh\\open-online-classroom\\backend\\node_modules\\router\\index.js:582:12)\n    at next (D:\\hocsinh\\open-online-classroom\\backend\\node_modules\\router\\index.js:291:5)\n    at read (D:\\hocsinh\\open-online-classroom\\backend\\node_modules\\body-parser\\lib\\read.js:42:5)\n    at urlencodedParser (D:\\hocsinh\\open-online-classroom\\backend\\node_modules\\body-parser\\lib\\types\\urlencoded.js:57:5)\n    at Layer.handleRequest (D:\\hocsinh\\open-online-classroom\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at trimPrefix (D:\\hocsinh\\open-online-classroom\\backend\\node_modules\\router\\index.js:342:13)"}
